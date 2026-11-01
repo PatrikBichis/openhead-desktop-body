@@ -1,0 +1,12 @@
+OpenHead desk body
+Copyright 2026 the OpenHead desk body authors
+
+This product includes parts derived from Open Duck Mini v2
+(https://github.com/apirrone/Open_Duck_Mini), Copyright Antoine Pirrone and contributors,
+licensed under the Apache License 2.0: the neck design, the printed neck parts
+(neck_left_sheet, neck_right_sheet, head_pitch_to_yaw, unchanged; head_yaw_to_roll_bearing,
+changed), servo positions and joint limits.
+
+The assembly in hardware/assembly contains the Feetech STS3215 and Waveshare Bus Servo
+Adapter models from SO-ARM100 (https://github.com/TheRobotStudio/SO-ARM100),
+Copyright TheRobotStudio, licensed under the Apache License 2.0.

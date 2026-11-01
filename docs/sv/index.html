@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenHead desk body</title>
+  <meta name="description" content="En iPhone på en hals med fyra servon: en AI-assistent på skrivbordet som tittar på dig. Utskrivna delar, firmware för Arduino Uno R4 WiFi, Python och en MCP-server. Halsen är Open Duck Mini v2:s, anpassad för att hålla en telefon. Öppen källkod.">
+  <meta property="og:title" content="OpenHead desk body">
+  <meta property="og:description" content="En iPhone på en hals med fyra servon: en AI-assistent på skrivbordet som tittar på dig. Öppen källkod.">
+  <meta property="og:image" content="https://patrikbichis.github.io/openhead-desktop-body/media/desk-assistant-poster.jpg">
+  <link rel="alternate" hreflang="en" href="https://patrikbichis.github.io/openhead-desktop-body/">
+  <link rel="alternate" hreflang="sv" href="https://patrikbichis.github.io/openhead-desktop-body/sv/">
+  <link rel="alternate" hreflang="x-default" href="https://patrikbichis.github.io/openhead-desktop-body/">
+  <link rel="icon" href="../media/favicon.png">
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="../media/icon.png" alt="">OpenHead desk body</a>
+      <nav aria-label="Huvudmeny">
+        <a href="#what">Vad den gör</a>
+        <a href="#bom">Delar</a>
+        <a href="#print">Utskrift</a>
+        <a href="#software">Mjukvara</a>
+        <a href="#agents">AI-agenter</a>
+        <a href="https://patrikbichis.github.io/openhead/sv/">OpenHead-appen</a>
+      </nav>
+      <a class="lang" href="../" hreflang="en" lang="en">English</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Öppen hårdvara · Öppen källkod</p>
+          <h1>En hals till robotens ansikte.</h1>
+          <p class="lead">En iPhone med OpenHead på en hals med fyra servon: en AI-assistent på skrivbordet som vänder sig mot dig, nickar, skakar på huvudet och följer dig med blicken. Utskrivna delar, Arduino-firmware, Python och en MCP-server.</p>
+          <div class="buttons">
+            <a class="btn" href="https://github.com/PatrikBichis/openhead-desktop-body"><svg class="gh" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>Visa på GitHub</a>
+            <a class="btn ghost" href="https://patrikbichis.github.io/openhead/sv/">OpenHead-appen</a>
+          </div>
+          <p class="note">Halsen är <a href="https://github.com/apirrone/Open_Duck_Mini">Open Duck Mini v2</a>:s, utskriven från Open Ducks egna filer och anpassad för att hålla en telefon.</p>
+        </div>
+        <div class="phone">
+          <img src="../media/hardware/hero.jpg" alt="Rendering av riggen: ett rött torn och en hals med fyra servon som håller en iPhone med ett leende ansikte" style="border-radius:22px; aspect-ratio: 4 / 3">
+        </div>
+      </div>
+    </section>
+
+    <section id="desk" class="film">
+      <div class="wrap">
+        <h2>En AI-assistent på skrivbordet</h2>
+        <p class="sub">En 3D-rendering av riggen: den följer ditt ansikte, pratar, kartlägger rummet med bakkameran medan frontkameran ser dig, och skickar alla sensorer till din agent. Video på den riktiga riggen kommer härnäst.</p>
+        <video controls muted loop playsinline preload="metadata" poster="../media/desk-assistant-poster.jpg"
+               aria-label="3D-rendering: den röda riggen på ett skrivbord som följer en person, pratar, använder båda kamerorna och skickar sensordata till en AI-agent på en laptop">
+          <source src="../media/desk-assistant.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <section id="what" class="alt">
+      <div class="wrap">
+        <h2>Vad den gör</h2>
+        <p class="sub">Telefonen är ansiktet och sinnena (det är <a href="https://github.com/PatrikBichis/openhead">OpenHead</a>); det här är kroppen som rör den.</p>
+        <div class="grid">
+          <div class="card">
+            <div class="icon" aria-hidden="true">👀</div>
+            <h3>Tittar på dig</h3>
+            <p>Telefonens frontkamera hittar ditt ansikte. Halsen vrider sig så att du hamnar i mitten, medan ögonen på skärmen följer dig.</p>
+          </div>
+          <div class="card">
+            <div class="icon" aria-hidden="true">🙆</div>
+            <h3>Nickar och skakar</h3>
+            <p>Ja, nej, en nyfiken lutning, eller titta vart som helst: yaw ±100°, pitch −20…+35°, roll ±25°, med mjuka rörelser.</p>
+          </div>
+          <div class="card">
+            <div class="icon" aria-hidden="true">🤖</div>
+            <h3>Redo för AI-agenter</h3>
+            <p>Två MCP-servrar bredvid varandra: <code>openhead</code> för ansiktet och sensorerna, <code>openhead-body</code> för halsen.</p>
+          </div>
+          <div class="card">
+            <div class="icon" aria-hidden="true">🛡️</div>
+            <h3>Säker från början</h3>
+            <p>Uno släpper servona när kommandona uteblir i 150 ms, startar där de står, begränsar varje steg och har nödstopp.</p>
+          </div>
+          <div class="card">
+            <div class="icon" aria-hidden="true">🦆</div>
+            <h3>Open Ducks hals</h3>
+            <p>Fyra Feetech STS3215 i Open Duck Mini v2:s hals, med en ny telefonhållare, ett torn och en bas för elektroniken.</p>
+          </div>
+          <div class="card">
+            <div class="icon" aria-hidden="true">🧪</div>
+            <h3>Prova utan hårdvara</h3>
+            <p>En simulerad Uno med fyra servon kör samma kod: <code>openhead-body --port fake look 30 10</code>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bom">
+      <div class="wrap">
+        <h2>Delar</h2>
+        <p class="sub">Allt utom de utskrivna delarna och telefonen.</p>
+        <div style="overflow-x:auto">
+          <table class="data">
+            <thead><tr><th>Antal</th><th>Del</th><th>Anmärkning</th></tr></thead>
+            <tbody>
+              <tr><td>4</td><td><strong>Feetech STS3215</strong> seriellt bus-servo</td><td>Samma servo som i SO-101:s follower-arm (7,4 V, 1/345); 1/191 eller 1/147 fungerar också i halsen</td></tr>
+              <tr><td>1</td><td><strong>Arduino Uno R4 WiFi</strong></td><td>Styr servobussen; USB till datorn</td></tr>
+              <tr><td>1</td><td><strong>Waveshare Bus Servo Adapter (A)</strong></td><td>Seriellt servokort, bygel i läge B</td></tr>
+              <tr><td>1</td><td><strong>Adafruit BNO085</strong> IMU</td><td>På tornet som kroppens referens; Qwiic till Uno</td></tr>
+              <tr><td>1</td><td>iPhone 12 eller nyare</td><td>Kör OpenHead, monterad liggande</td></tr>
+              <tr><td>1</td><td>Kullager 608ZZ</td><td>Bakre stöd för roll-axeln</td></tr>
+              <tr><td>1</td><td>Nätaggregat 7,4 V, minst 3 A</td><td>Plus en kondensator 470–1000 µF och en säkring</td></tr>
+              <tr><td>–</td><td>Skruv M2 × 8, M3 × 12–16, M3 × 6, M2,5 × 6</td><td>Hela listan finns i <a href="https://github.com/PatrikBichis/openhead-desktop-body#bill-of-materials">README</a></td></tr>
+              <tr><td>1</td><td>Högtalare (valfri)</td><td>Bluetooth till telefonen</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="print" class="alt">
+      <div class="wrap">
+        <h2>Utskrift</h2>
+        <p class="sub">STL- och STEP-filer i <a href="https://github.com/PatrikBichis/openhead-desktop-body/tree/main/hardware/print">hardware/print</a>, och hela riggen som en STEP-sammanställning. Ungefär 250 g PLA.</p>
+        <div class="grid" style="grid-template-columns: repeat(3, minmax(0, 1fr))">
+          <figure style="margin:0"><img class="shot" src="../media/hardware/front.jpg" alt="Riggen framifrån" loading="lazy"></figure>
+          <figure style="margin:0"><img class="shot" src="../media/hardware/side.jpg" alt="Riggen från sidan: torn, hals och telefonhållare" loading="lazy"></figure>
+          <figure style="margin:0"><img class="shot" src="../media/hardware/back.jpg" alt="Riggen bakifrån: bakbågen med lagret och telefonens bakkamera" loading="lazy"></figure>
+        </div>
+        <div style="overflow-x:auto; margin-top: 28px">
+          <table class="data">
+            <thead><tr><th>Del</th><th>Källa</th><th>Anmärkning</th></tr></thead>
+            <tbody>
+              <tr><td>bas, torn, telefonhållare, bakbåge</td><td>ny</td><td>Stativet, telefonramen med buren för roll-servot, bågen med sätet för 608ZZ</td></tr>
+              <tr><td>head_yaw_to_roll_bearing</td><td>Open Duck, ändrad</td><td>En utskriven tapp Ø7,9 för lagret; 4–5 väggar och 100 % fyllnad runt den</td></tr>
+              <tr><td>halsplåtar, head_pitch_to_yaw</td><td>Open Duck, oförändrade</td><td>Open Duck Mini v2:s egna filer</td></tr>
+              <tr><td>TPU-hörn, bakkudde, fotsula</td><td>ny, valfri</td><td>Stötskydd för telefonen och en halkfri fot</td></tr>
+              <tr><td>nollmall</td><td>verktyg</td><td>Ställer nack-pitchens nolläge vid kalibreringen</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="software">
+      <div class="wrap">
+        <h2>Mjukvara</h2>
+        <p class="sub">Firmware för Uno R4 WiFi och ett Python-paket med CLI, bibliotek och MCP-server.</p>
+        <pre><span class="c"># koppling: Unos stift 0/1 till Waveshare-adaptern (läge B), BNO085 på Qwiic, 7,4 V till adaptern</span>
+arduino-cli compile --fqbn arduino:renesas_uno:unor4wifi -u -p COM5 firmware/body_uno
+
+cd python &amp;&amp; uv sync
+uv run openhead-body --port fake look 30 10     <span class="c"># utan hårdvara: en simulerad Uno</span>
+uv run openhead-body look 30 10                  <span class="c"># yaw, pitch (roll) i grader</span>
+uv run openhead-body nod                         <span class="c"># nod | shake | tilt | home | relax</span>
+uv run openhead-body follow --phone 192.168.1.20 <span class="c"># vänd dig mot personen telefonen ser</span></pre>
+        <p class="note">+yaw vrider åt huvudets vänster, +pitch tittar upp: samma konvention som OpenHeads <code>faces</code>-ström, så ett ansiktes bäring är direkt den yaw som ska vridas. Servoinställning och kalibrering: <code>openhead-body-bench</code> och <code>openhead-body-calib</code>.</p>
+      </div>
+    </section>
+
+    <section id="agents" class="dark">
+      <div class="wrap">
+        <h2>Använd den från en AI-agent</h2>
+        <p class="sub">Kör båda MCP-servrarna: OpenHeads för ansiktet, kamerorna och sensorerna, och den här för halsen. Para telefonen en gång med <code>openhead pair</code>.</p>
+        <pre>claude mcp add openhead --scope user -- uvx --from "openhead[mcp] @ git+https://github.com/PatrikBichis/openhead@v0.3.0#subdirectory=python" openhead mcp --device 192.168.1.20
+claude mcp add openhead-body --scope user -- uvx --from "git+https://github.com/PatrikBichis/openhead-desktop-body#subdirectory=python" openhead-body --phone 192.168.1.20 mcp</pre>
+        <ul class="list" style="margin-top: 20px">
+          <li><code>look(yaw, pitch, roll)</code>: rikta huvudet</li>
+          <li><code>gesture(nod | shake | tilt)</code>, <code>home()</code>, <code>relax()</code></li>
+          <li><code>follow_face(on)</code>: vänd dig mot personen telefonen ser</li>
+          <li><code>status()</code>: pose, ledvinklar, servolast, busspänning</li>
+        </ul>
+        <p class="note">Fråga sedan: ”Titta på mig och nicka om du ser mig.” Andra agenter (Claude Desktop, Codex, Cursor, Gemini, VS Code): <a href="https://github.com/PatrikBichis/openhead-desktop-body#use-it-from-an-ai-agent">README</a> (på engelska).</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Bygger på Open Duck Mini</h2>
+        <p class="sub" style="margin-bottom: 12px">Halsens design, dess utskrivna delar, servolägen och ledgränser kommer från <a href="https://github.com/apirrone/Open_Duck_Mini">Open Duck Mini v2</a>, av Antoine Pirrone med flera (Apache 2.0). Telefonhållaren, tornet, basen och bakbågen är nya. Modellerna av servot och adaptern kommer från <a href="https://github.com/TheRobotStudio/SO-ARM100">SO-ARM100</a> (Apache 2.0).</p>
+        <p class="note">Status: riggen är utskriven och monterad. Firmware och verktyg är testade mot en simulerad Uno; ledernas riktning, nollägen och IMU:ns axlar kontrolleras på den riktiga riggen härnäst.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>OpenHead desk body · Apache 2.0</span>
+      <nav aria-label="Sidfot">
+        <a href="https://patrikbichis.github.io/openhead/sv/">OpenHead-appen</a>
+        <a href="https://github.com/apirrone/Open_Duck_Mini">Open Duck Mini</a>
+        <a class="ghlink" href="https://github.com/PatrikBichis/openhead-desktop-body">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="../film.js" defer></script>
+</body>
+</html>

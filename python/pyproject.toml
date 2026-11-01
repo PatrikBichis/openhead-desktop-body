@@ -1,0 +1,42 @@
+[project]
+name = "openhead-body"
+version = "0.1.0"
+description = "Drive the OpenHead desk body: an iPhone on Open Duck Mini's four-servo neck. Python library, CLI and MCP server."
+license = "Apache-2.0"
+requires-python = ">=3.12"
+dependencies = [
+    "pyserial>=3.5",
+    "mcp>=1.20",
+    "openhead @ git+https://github.com/PatrikBichis/openhead@v0.3.0#subdirectory=python",
+]
+
+[project.scripts]
+openhead-body = "openhead_body.cli:main"
+openhead-body-bench = "openhead_body.bench:main"
+openhead-body-calib = "openhead_body.calib:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/openhead_body"]
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-asyncio>=0.24", "ruff>=0.8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501", "E731"]   # the bench tools keep their original style

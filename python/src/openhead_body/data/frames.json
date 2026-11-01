@@ -1,0 +1,267 @@
+{
+  "note": "mm, riggens koordinater (x fram, y vänster, z upp, bänkskiva z=0), nolläge",
+  "rig_neck_height": 180.0,
+  "joints": {
+    "neck_pitch": {
+      "anchor": [
+        1.0,
+        19.15,
+        180.0
+      ],
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "range_rad": [
+        -0.349,
+        1.134
+      ]
+    },
+    "head_pitch": {
+      "anchor": [
+        1.0,
+        19.15,
+        246.0
+      ],
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "range_rad": [
+        -0.785,
+        0.785
+      ]
+    },
+    "head_yaw": {
+      "anchor": [
+        1.0,
+        0.1,
+        303.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "range_rad": [
+        -2.793,
+        2.793
+      ]
+    },
+    "head_roll": {
+      "anchor": [
+        41.95,
+        0.1,
+        283.85
+      ],
+      "axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "range_rad": [
+        -0.524,
+        0.524
+      ]
+    }
+  },
+  "envelopes": {
+    "neck_pitch_servo/servo": {
+      "min": [
+        -11.36,
+        -18.5,
+        144.89
+      ],
+      "max": [
+        13.36,
+        17.2,
+        190.11
+      ]
+    },
+    "neck_pitch_servo/horn": {
+      "min": [
+        -8.98,
+        -17.7,
+        170.02
+      ],
+      "max": [
+        10.98,
+        19.15,
+        189.98
+      ]
+    },
+    "neck_pitch_assembly/del": {
+      "min": [
+        -14.36,
+        -21.75,
+        169.01
+      ],
+      "max": [
+        16.36,
+        23.15,
+        227.0
+      ]
+    },
+    "neck_pitch_assembly/servo": {
+      "min": [
+        -11.36,
+        -18.5,
+        210.89
+      ],
+      "max": [
+        13.36,
+        17.2,
+        256.11
+      ]
+    },
+    "neck_pitch_assembly/horn": {
+      "min": [
+        -8.98,
+        -17.7,
+        236.02
+      ],
+      "max": [
+        10.98,
+        19.15,
+        255.98
+      ]
+    },
+    "head_pitch_to_yaw/del": {
+      "min": [
+        -20.0,
+        -21.75,
+        235.0
+      ],
+      "max": [
+        11.99,
+        23.15,
+        307.0
+      ]
+    },
+    "neck_yaw_assembly/del": {
+      "min": [
+        -46.0,
+        -39.89,
+        261.75
+      ],
+      "max": [
+        41.95,
+        40.09,
+        303.95
+      ]
+    },
+    "neck_yaw_assembly/servo": {
+      "min": [
+        -9.11,
+        -12.26,
+        265.35
+      ],
+      "max": [
+        36.11,
+        12.46,
+        301.05
+      ]
+    },
+    "neck_yaw_assembly/horn": {
+      "min": [
+        -8.98,
+        -9.88,
+        266.15
+      ],
+      "max": [
+        10.98,
+        10.08,
+        303.0
+      ]
+    },
+    "head_assembly/del": {
+      "min": [
+        -47.1,
+        -32.27,
+        267.85
+      ],
+      "max": [
+        81.0,
+        32.47,
+        321.9
+      ]
+    },
+    "head_assembly/servo": {
+      "min": [
+        43.9,
+        -12.26,
+        273.74
+      ],
+      "max": [
+        79.6,
+        12.46,
+        318.96
+      ]
+    },
+    "head_assembly/horn": {
+      "min": [
+        41.95,
+        -9.88,
+        273.87
+      ],
+      "max": [
+        78.8,
+        10.08,
+        293.83
+      ]
+    }
+  },
+  "parts": [
+    "neck_pitch_servo__wj-wk00-0123middlecase_56.stl",
+    "neck_pitch_servo__drive_palonier.stl",
+    "neck_pitch_servo__wj-wk00-0124bottomcase_45.stl",
+    "neck_pitch_servo__wj-wk00-0122topcabinetcase_95.stl",
+    "neck_pitch_servo__passive_palonier.stl",
+    "neck_pitch_assembly__neck_left_sheet.stl",
+    "neck_pitch_assembly__neck_right_sheet.stl",
+    "neck_pitch_assembly__wj-wk00-0123middlecase_56.stl",
+    "neck_pitch_assembly__drive_palonier.stl",
+    "neck_pitch_assembly__wj-wk00-0124bottomcase_45.stl",
+    "neck_pitch_assembly__wj-wk00-0122topcabinetcase_95.stl",
+    "neck_pitch_assembly__passive_palonier.stl",
+    "head_pitch_to_yaw__head_pitch_to_yaw.stl",
+    "neck_yaw_assembly__head_yaw_to_roll.stl",
+    "neck_yaw_assembly__wj-wk00-0123middlecase_56.stl",
+    "neck_yaw_assembly__drive_palonier.stl",
+    "neck_yaw_assembly__wj-wk00-0124bottomcase_45.stl",
+    "neck_yaw_assembly__wj-wk00-0122topcabinetcase_95.stl",
+    "neck_yaw_assembly__passive_palonier.stl",
+    "head_assembly__head_roll_mount.stl",
+    "head_assembly__roll_bearing.stl",
+    "head_assembly__wj-wk00-0123middlecase_56.stl",
+    "head_assembly__drive_palonier.stl",
+    "head_assembly__wj-wk00-0124bottomcase_45.stl",
+    "head_assembly__wj-wk00-0122topcabinetcase_95.stl",
+    "head_assembly__passive_palonier.stl"
+  ],
+  "phone_imu": [
+    90.25,
+    -0.0,
+    290.95
+  ],
+  "phone_cam_rear": [
+    84.95,
+    60.85,
+    314.2
+  ],
+  "phone_cam_front": [
+    93.95,
+    -43.35,
+    320.7
+  ],
+  "sim_head": {
+    "mass_g": 356.0,
+    "com": [
+      70.45,
+      0.0,
+      295.82
+    ]
+  }
+}
