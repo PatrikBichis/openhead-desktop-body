@@ -52,7 +52,7 @@
     <section id="desk" class="film">
       <div class="wrap">
         <h2>A desk AI assistant</h2>
-        <p class="sub">A 3D render of the rig: it follows your face, talks, maps the room with the back camera while the front camera watches you, and streams every sensor to your agent. Video of the real rig comes next.</p>
+        <p class="sub">A 3D render of the rig: it follows your face, hears your question and answers in its own voice (turn the sound on), maps the room with the back camera while the front camera watches you, and streams every sensor to your agent. Video of the real rig comes next.</p>
         <video controls muted loop playsinline preload="metadata" poster="media/desk-assistant-poster.jpg"
                aria-label="3D render: the red desk body on a desk following a person, talking, using both cameras and streaming its sensors to an AI agent on a laptop">
           <source src="media/desk-assistant.mp4" type="video/mp4">
@@ -166,7 +166,7 @@ uv run openhead-body follow --phone 192.168.1.20 <span class="c"># turn towards 
       <div class="wrap">
         <h2>Use it from an AI agent</h2>
         <p class="sub">Run both MCP servers: OpenHead's for the face, cameras and sensors, this one for the neck. Pair the phone once with <code>openhead pair</code>.</p>
-        <pre>claude mcp add openhead --scope user -- uvx --from "openhead[mcp] @ git+https://github.com/PatrikBichis/openhead@v0.3.0#subdirectory=python" openhead mcp --device 192.168.1.20
+        <pre>claude mcp add openhead --scope user -- uvx --from "openhead[mcp] @ git+https://github.com/PatrikBichis/openhead@v0.4.0#subdirectory=python" openhead mcp --device 192.168.1.20
 claude mcp add openhead-body --scope user -- uvx --from "git+https://github.com/PatrikBichis/openhead-desktop-body#subdirectory=python" openhead-body --phone 192.168.1.20 mcp</pre>
         <ul class="list" style="margin-top: 20px">
           <li><code>look(yaw, pitch, roll)</code>: point the head</li>

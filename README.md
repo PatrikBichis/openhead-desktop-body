@@ -17,7 +17,7 @@
 <p align="center">
   <a href="docs/media/desk-assistant.mp4"><img src="docs/media/desk-assistant-poster.jpg" alt="3D render: the red desk body, an iPhone 12 on a four-servo neck, on a desk next to a laptop" width="720"></a>
 </p>
-<p align="center"><a href="docs/media/desk-assistant.mp4">Watch the 3D render (41 s)</a>. Video of the real rig comes next.</p>
+<p align="center"><a href="docs/media/desk-assistant.mp4">Watch the 3D render (with sound, 55 s)</a>: it follows a face, listens and answers in its own voice, and streams its sensors to an agent. Video of the real rig comes next.</p>
 
 The phone runs [OpenHead](https://github.com/PatrikBichis/openhead): the face, the cameras, face tracking, ARKit, GPS and the other sensors, all over Wi-Fi. This repository is the body under it: printed parts, a neck with four Feetech servos, an Arduino Uno R4 WiFi that drives them, and Python with a CLI and an MCP server, so an AI agent can turn the head, nod, shake it and follow the person in front of it.
 

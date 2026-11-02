@@ -52,7 +52,7 @@
     <section id="desk" class="film">
       <div class="wrap">
         <h2>En AI-assistent på skrivbordet</h2>
-        <p class="sub">En 3D-rendering av riggen: den följer ditt ansikte, pratar, kartlägger rummet med bakkameran medan frontkameran ser dig, och skickar alla sensorer till din agent. Video på den riktiga riggen kommer härnäst.</p>
+        <p class="sub">En 3D-rendering av riggen: den följer ditt ansikte, hör din fråga och svarar med egen röst (slå på ljudet), kartlägger rummet med bakkameran medan frontkameran ser dig, och skickar alla sensorer till din agent. Video på den riktiga riggen kommer härnäst.</p>
         <video controls muted loop playsinline preload="metadata" poster="../media/desk-assistant-poster.jpg"
                aria-label="3D-rendering: den röda riggen på ett skrivbord som följer en person, pratar, använder båda kamerorna och skickar sensordata till en AI-agent på en laptop">
           <source src="../media/desk-assistant.mp4" type="video/mp4">
@@ -166,7 +166,7 @@ uv run openhead-body follow --phone 192.168.1.20 <span class="c"># vänd dig mot
       <div class="wrap">
         <h2>Använd den från en AI-agent</h2>
         <p class="sub">Kör båda MCP-servrarna: OpenHeads för ansiktet, kamerorna och sensorerna, och den här för halsen. Para telefonen en gång med <code>openhead pair</code>.</p>
-        <pre>claude mcp add openhead --scope user -- uvx --from "openhead[mcp] @ git+https://github.com/PatrikBichis/openhead@v0.3.0#subdirectory=python" openhead mcp --device 192.168.1.20
+        <pre>claude mcp add openhead --scope user -- uvx --from "openhead[mcp] @ git+https://github.com/PatrikBichis/openhead@v0.4.0#subdirectory=python" openhead mcp --device 192.168.1.20
 claude mcp add openhead-body --scope user -- uvx --from "git+https://github.com/PatrikBichis/openhead-desktop-body#subdirectory=python" openhead-body --phone 192.168.1.20 mcp</pre>
         <ul class="list" style="margin-top: 20px">
           <li><code>look(yaw, pitch, roll)</code>: rikta huvudet</li>
