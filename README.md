@@ -17,7 +17,7 @@
 <p align="center">
   <a href="docs/media/desk-assistant.mp4"><img src="docs/media/desk-assistant-poster.jpg" alt="3D render: the red desk body, an iPhone 12 on a four-servo neck, on a desk next to a laptop" width="720"></a>
 </p>
-<p align="center"><a href="docs/media/desk-assistant.mp4">Watch the 3D render (with sound, 55 s)</a>: it follows a face, listens and answers in its own voice, and streams its sensors to an agent. Video of the real rig comes next.</p>
+<p align="center"><a href="docs/media/desk-assistant.mp4">Watch the 3D render (with sound, 63 s)</a>: it follows a face, listens and answers in its own voice, streams its sensors to an agent, and shows it all in the cockpit in your browser. Video of the real rig comes next.</p>
 
 The phone runs [OpenHead](https://github.com/PatrikBichis/openhead): the face, the cameras, face tracking, ARKit, GPS and the other sensors, all over Wi-Fi. This repository is the body under it: printed parts, a neck with four Feetech servos, an Arduino Uno R4 WiFi that drives them, and Python with a CLI and an MCP server, so an AI agent can turn the head, nod, shake it and follow the person in front of it.
 
@@ -130,6 +130,18 @@ with Neck.open() as neck:          # "fake" simulates the Uno
 Angles are in the head frame: **+yaw turns to the head's left, +pitch looks up, +roll tilts the top of the head to its left**, the same convention as OpenHead's `faces` stream, so a face's bearing is directly the yaw to turn. Pitch is shared between the neck and the head joints, whose axes are parallel. While the torque is on a thread sends the targets 50 times a second (the Uno's watchdog lets go after 150 ms of silence); moves follow a minimum-jerk profile.
 
 Servo setup and calibration: `openhead-body-bench` (scan, IDs, registers, latency, watchdog test, single-joint moves) and `openhead-body-calib` (register audit, gear test, safe zeroing, and calibrating the neck with the phone's gravity vector). The step-by-step guide is in [`docs/calibration.sv.md`](docs/calibration.sv.md) (Swedish). The calibration is saved per rig in `~/.openhead-body/joints.json` (or `$OPENHEAD_BODY_JOINTS`).
+
+### Watch the head in the cockpit
+
+OpenHead 0.5 has a dashboard for the phone: `openhead cockpit` opens it in the browser, with what the phone's cameras see (front camera in mode capture, back camera in sensing), every sensor, a box for what the head should say (with examples, the film's joke first), listening, theme and emotion. Cards can be moved, added and removed. Handy while you set up the rig: you see what the head sees as the neck turns. The phone shows "Camera shared" while you watch.
+
+```bash
+uvx --from "openhead @ git+https://github.com/PatrikBichis/openhead#subdirectory=python" openhead cockpit --device 192.168.1.20
+```
+
+![OpenHead cockpit: camera, speak with examples, expression and theme, status, mode and ARKit position](docs/media/cockpit.png)
+
+The neck itself is driven by `openhead-body` (above) or its MCP server (below); the cockpit has no card for it yet.
 
 ## Use it from an AI agent
 

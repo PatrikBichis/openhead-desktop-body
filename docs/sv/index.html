@@ -52,9 +52,9 @@
     <section id="desk" class="film">
       <div class="wrap">
         <h2>En AI-assistent på skrivbordet</h2>
-        <p class="sub">En 3D-rendering av riggen: den följer ditt ansikte, hör din fråga och svarar med egen röst (slå på ljudet), kartlägger rummet med bakkameran medan frontkameran ser dig, och skickar alla sensorer till din agent. Video på den riktiga riggen kommer härnäst.</p>
+        <p class="sub">En 3D-rendering av riggen: den följer ditt ansikte, hör din fråga och svarar med egen röst (slå på ljudet), kartlägger rummet med bakkameran medan frontkameran ser dig, skickar alla sensorer till din agent och visar allt i cockpiten i webbläsaren. Video på den riktiga riggen kommer härnäst.</p>
         <video controls muted loop playsinline preload="metadata" poster="../media/desk-assistant-poster.jpg"
-               aria-label="3D-rendering: den röda riggen på ett skrivbord som följer en person, pratar, använder båda kamerorna och skickar sensordata till en AI-agent på en laptop">
+               aria-label="3D-rendering: den röda riggen på ett skrivbord som följer en person, pratar, använder båda kamerorna skickar sensordata till en AI-agent på en laptop och visar allt i cockpiten i en webbläsare">
           <source src="../media/desk-assistant.mp4" type="video/mp4">
         </video>
       </div>
@@ -159,6 +159,10 @@ uv run openhead-body look 30 10                  <span class="c"># yaw, pitch (r
 uv run openhead-body nod                         <span class="c"># nod | shake | tilt | home | relax</span>
 uv run openhead-body follow --phone 192.168.1.20 <span class="c"># vänd dig mot personen telefonen ser</span></pre>
         <p class="note">+yaw vrider åt huvudets vänster, +pitch tittar upp: samma konvention som OpenHeads <code>faces</code>-ström, så ett ansiktes bäring är direkt den yaw som ska vridas. Servoinställning och kalibrering: <code>openhead-body-bench</code> och <code>openhead-body-calib</code>.</p>
+        <h3 style="margin-top: 40px">Se huvudet i cockpiten</h3>
+        <p class="sub">OpenHead 0.5 öppnar en panel för telefonen i webbläsaren: vad kamerorna ser (fram eller bak), alla sensorer, vad huvudet ska säga (med exempel), tema och känsla, som kort du kan flytta, lägga till och ta bort. Praktiskt när du ställer in riggen: du ser vad huvudet ser medan halsen vrider sig.</p>
+        <img class="shot" src="../media/cockpit.png" alt="OpenHead cockpit i en webbläsare: kameran som video med två personer, ett Speak-kort med exempelknappar, uttryck och tema, status, läge och ARKit-position" loading="lazy">
+        <pre style="margin-top: 20px">openhead cockpit --device 192.168.1.20   <span class="c"># OpenHeads Python-verktyg; telefonen visar "Camera shared"</span></pre>
       </div>
     </section>
 

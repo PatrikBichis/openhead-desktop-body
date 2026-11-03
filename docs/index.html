@@ -52,9 +52,9 @@
     <section id="desk" class="film">
       <div class="wrap">
         <h2>A desk AI assistant</h2>
-        <p class="sub">A 3D render of the rig: it follows your face, hears your question and answers in its own voice (turn the sound on), maps the room with the back camera while the front camera watches you, and streams every sensor to your agent. Video of the real rig comes next.</p>
+        <p class="sub">A 3D render of the rig: it follows your face, hears your question and answers in its own voice (turn the sound on), maps the room with the back camera while the front camera watches you, streams every sensor to your agent and shows it all in the cockpit in your browser. Video of the real rig comes next.</p>
         <video controls muted loop playsinline preload="metadata" poster="media/desk-assistant-poster.jpg"
-               aria-label="3D render: the red desk body on a desk following a person, talking, using both cameras and streaming its sensors to an AI agent on a laptop">
+               aria-label="3D render: the red desk body on a desk following a person, talking, using both cameras, streaming its sensors to an AI agent on a laptop and showing it all in the cockpit in a browser">
           <source src="media/desk-assistant.mp4" type="video/mp4">
         </video>
       </div>
@@ -159,6 +159,10 @@ uv run openhead-body look 30 10                  <span class="c"># yaw, pitch (r
 uv run openhead-body nod                         <span class="c"># nod | shake | tilt | home | relax</span>
 uv run openhead-body follow --phone 192.168.1.20 <span class="c"># turn towards the person the phone sees</span></pre>
         <p class="note">+yaw turns to the head's left, +pitch looks up: the same convention as OpenHead's <code>faces</code> stream, so a face's bearing is the yaw to turn. Servo setup and calibration: <code>openhead-body-bench</code> and <code>openhead-body-calib</code>.</p>
+        <h3 style="margin-top: 40px">Watch the head in the cockpit</h3>
+        <p class="sub">OpenHead 0.5 opens a dashboard for the phone in your browser: what its cameras see (front or back), every sensor, what the head should say (with examples), theme and emotion, as cards you can move, add and remove. Handy while you set up the rig: you see what the head sees as the neck turns.</p>
+        <img class="shot" src="media/cockpit.png" alt="OpenHead cockpit in a browser: the camera as video with two people, a Speak card with example buttons, expression and theme, status, mode and ARKit position" loading="lazy">
+        <pre style="margin-top: 20px">openhead cockpit --device 192.168.1.20   <span class="c"># OpenHead's Python tools; the phone shows "Camera shared"</span></pre>
       </div>
     </section>
 
